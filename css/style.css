@@ -53,6 +53,11 @@
     
 }
 
+html {
+    position: relative;
+    min-height: 100%;
+}
+
 body {
     background-image: url("../assets/images/pattern_body.png");
     width: 1600px;
@@ -60,7 +65,8 @@ body {
     font-family: "Lato", sans-serif;
     color: rgb(255, 255, 255);
     font-weight: normal;
-    font-size: 16px;
+    font-size: 16px;   
+    margin-bottom: 320px; 
 }   
 
 a {
@@ -96,35 +102,41 @@ h1 {
 .navigation {
     display: flex;
     justify-content: flex-end;
+  
 }
 
 .navigation-menu {
     list-style: none;
     display: flex;
-    justify-content: flex-start
-}
-
-.navigation-menu a {
-    height: 110px;
-    padding: 46px 25px 0;
-}
-
-.navigation-menu a:last-child {
-    padding-right: 5px;
+    justify-content: flex-start;
+    overflow: hidden;
+    max-width: 760px;
 }
 
 .navigation_item {
+    padding: 46px 25px 0;
+    border-top: 3px solid  rgba(255, 255, 255, 0);
+}
+
+.navigation_item:last-child {
+    padding-right: 5px;
+}
+
+.navigation_item a{
     font-size: 21px;
     font-family: "Gentium Book Basic", serif;
     font-weight: bold;
     line-height: 1.2;
     color: rgb(255, 255, 255);
-    border-top: 3px solid  rgba(255, 255, 255, 0);
 }
 
 .navigation_item:hover {
     border-top: 3px solid  rgba(255, 255, 255, 0.7);
     transition: ease;
+    color: rgb(218, 179, 62);
+}
+
+.navigation_item a:hover {
     color: rgb(218, 179, 62);
 }
 
@@ -142,10 +154,6 @@ h1 {
 
 .header-social-icons i:hover {
     color: rgb(255, 255, 255);
-}
-
-main {
-    min-height: calc(100vh - 320px);
 }
 
 .section-promo {
@@ -222,7 +230,6 @@ h2::after {
     margin-bottom: 10px;
     max-height: 170px;
     overflow: hidden;
-    
 }
 
 .information-article img {
@@ -520,6 +527,9 @@ h4::after {
 }
 
 footer {
+    position: absolute;
+    bottom: 0;
+    width: 1600px;
     height: 320px;
     background-color: #191919;
     padding: 0 215px 50px 215px;
